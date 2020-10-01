@@ -44,5 +44,5 @@ while True:
     txt, update_id = get_message(x)
     print(f'update_id: {update_id} last_id:{last_update_id}')
     if last_update_id != update_id:
-        sendMessage(86775091, txt)
+        sendMessage(86775091, txt+'\U0001F601')
         last_update_id = update_id

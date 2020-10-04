@@ -1,3 +1,7 @@
+import requests
 smile = '😂'
-smile_code = '\U0001F601 23'
-print(len(smile_code))
+
+c = chr(65)
+code_a = ord('A')
+print(code_a)
+print(c)

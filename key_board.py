@@ -11,12 +11,13 @@ TOKEN = '1324065101:AAF23TNO8EXW_JT6bdXo7bDOxfa3agGvJNI'
 
 
 def sendMessage(id, txt):
-    keyboardButton = {
+    k = {
         'text': '1'
     }
 
     keyboard = [
-        [keyboardButton]
+        [k, k],
+        [k, k]
     ]
     replyKeyboardMarkup = {
         'keyboard': keyboard
@@ -25,12 +26,12 @@ def sendMessage(id, txt):
     parameter = {
         'chat_id': id,
         'text': txt,
-        # 'reply_markup': replyKeyboardMarkup,
+        'reply_markup': replyKeyboardMarkup,
     }
 
     url = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
 
-    response = requests.get(url=url, params=parameter)
+    response = requests.get(url=url, json=parameter)
 
 
 sendMessage('86775091', 'TXT')

@@ -26,11 +26,23 @@ def get_message(update):
 
 
 def sendMessage(id, txt):
+    keyboardButton = {
+        'text': '1'
+    }
+
+    keyboard = [
+        [keyboardButton]
+    ]
+    replyKeyboardMarkup = {
+        'keyboard': keyboard
+    }
 
     parameter = {
         'chat_id': id,
         'text': txt,
-        'disable_notification': True,
+        # 'parse_mode': 'HTML',
+        'reply_markup': replyKeyboardMarkup,
+        # 'disable_notification': True,
     }
 
     url = f'https://api.telegram.org/bot{TOKEN}/sendMessage'
@@ -44,5 +56,5 @@ while True:
     txt, update_id = get_message(x)
     print(f'update_id: {update_id} last_id:{last_update_id}')
     if last_update_id != update_id:
-        sendMessage(86775091, txt+'\U0001F601')
+        sendMessage(86775091, txt)
         last_update_id = update_id

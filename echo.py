@@ -39,10 +39,11 @@ def getUpdates():
     return chat_id
 
 
-TOKEN = '1324065101:AAF23TNO8EXW_JT6bdXo7bDOxfa3agGvJNI'
+TOKEN = '187988593:AAH2bUUIAgGDvlnXlNshjD6cNoGVg4qGZLE'
 
 
 # pprint(text)
+# sendMessage
 i = 0
 while True:
     chat_id = getUpdates()

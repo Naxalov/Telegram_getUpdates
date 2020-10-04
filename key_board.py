@@ -11,13 +11,14 @@ TOKEN = '1324065101:AAF23TNO8EXW_JT6bdXo7bDOxfa3agGvJNI'
 
 
 def sendMessage(id, txt):
-    k = {
-        'text': '1'
+    k1 = {
+        'text': 'Button 1'
     }
-
+    k2 = {
+        'text': 'Button 2'
+    }
     keyboard = [
-        [k, k],
-        [k, k]
+        [k1, k2],
     ]
     replyKeyboardMarkup = {
         'keyboard': keyboard
